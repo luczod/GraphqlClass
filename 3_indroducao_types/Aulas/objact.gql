@@ -1,0 +1,61 @@
+# epecificando o retorn diferente de uma api 
+# vem apenas o userName ao inves do object user inteiro no link
+
+query GetObjdct {
+	user {
+		id
+    userName
+  }
+}
+
+query GetListObjects {
+	listuser{
+		userName
+	}
+}
+
+
+const server = new ApolloServer({
+  typeDefs: gql`
+    type Query {
+      user: User!
+      listuser: [User!]!
+    }
+
+    type User {
+      id: ID!
+      userName: String!
+    }
+  `,
+  resolvers: {
+    Query: {
+      user: () => {
+        return {
+          id: "645d0",
+          userName: "Luca Changretta",
+        };
+      },
+
+      listuser: () => {
+        return [
+          {
+            id: "645d0",
+            userName: "Luca Changretta",
+          },
+          {
+            id: "64550",
+            userName: "Tommy Shelby",
+          },
+          {
+            id: "64540",
+            userName: "arthur  Shelby",
+          },
+        ];
+      },
+    },
+  },
+});
+
+server.listen(4004).then(({ url }) => {
+  console.log(`server run in ${url}`);
+});

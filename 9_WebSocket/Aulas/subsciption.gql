@@ -1,0 +1,13 @@
+subscription CREATED_COMMENT {
+  createdComment {
+    id
+    comment
+  }
+}
+
+subscription CREATED_COMMENT {
+  createdComment(test: "arg-test") {
+    id
+    comment
+  }
+}

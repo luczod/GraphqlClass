@@ -1,0 +1,3 @@
+mutation DELETE_POST {
+  deletePost(PostId: "6abpCpo")
+}

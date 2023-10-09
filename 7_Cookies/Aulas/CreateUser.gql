@@ -1,0 +1,43 @@
+mutation CREATE_USER {
+  createUser(
+    data: {
+      firstName: "Lenina"
+      lastName: "Crowne"
+      userName: "leia"
+      password: "aB1238"
+    }
+  ) {
+    id
+    firstName
+    lastName
+    userName
+    indexRef
+    createdAt
+    posts {
+      id
+      title
+      body
+    }
+  }
+}
+
+mutation CREATE_USER {
+  createUser(
+    data: {
+      firstName: "Saladino"
+      lastName: "Aiube"
+      userName: "sultao"
+      password: "aB12387"
+    }
+  ) {
+    id
+    firstName
+    lastName
+    userName
+    indexRef
+    createdAt
+    posts {
+      id
+    }
+  }
+}

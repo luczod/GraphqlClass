@@ -1,0 +1,18 @@
+import { ApolloServer } from '@apollo/server';
+import { startStandaloneServer } from '@apollo/server/standalone';
+ 
+const server = new ApolloServer({
+  typeDefs: `#graphql
+    type Query {
+      hello: String
+    }
+  `,
+});
+ 
+startStandaloneServer(server, {
+  listen: {
+    port: 4003,
+  },
+}).then(({ url }) => {
+  console.log(`Server listening on url  ${url}`);
+});

@@ -1,0 +1,35 @@
+import fetch from "node=fetch";
+
+#  resolvers das queries
+const users = async () => {
+  
+  return [
+    {
+      id: "1",
+      userName: "Big jack Horner",
+    },
+    {
+      id: "2",
+      userName: "GoldenLock",
+    },
+    {
+      id: "3",
+      userName: "Wolf",
+    },
+  ];
+};
+
+const user = async () => {
+  return {
+    id: "1",
+    userName: "Big jack Horner",
+  };
+};
+
+// destructor user and users
+export const userResolvers = {
+  Query: {
+    user,
+    users,
+  },
+};

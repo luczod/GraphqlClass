@@ -1,0 +1,10 @@
+# HTTP HEADERS
+# {
+#     "authorization": "Bearer 4dlkjkafs54654546546"
+# }
+
+query GET_POSTS {
+  posts {
+    id
+  }
+}

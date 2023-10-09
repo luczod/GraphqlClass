@@ -1,0 +1,6 @@
+# {
+#     "authorization": "Bearer S08"
+# }
+mutation DELETE_POST {
+  deletePost(PostId: "hYlzPCE")
+}

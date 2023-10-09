@@ -1,0 +1,2 @@
+o DataSource seria uma classe criada pelo time do apollo que faz requisições e tem um cache!
+o DataLoader seria um ajuntador de parâmetros para a consulta!!

@@ -1,0 +1,3 @@
+mutation LOGINOUT {
+  logout(userName: "sultao")
+}

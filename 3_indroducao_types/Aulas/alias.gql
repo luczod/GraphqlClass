@@ -1,0 +1,16 @@
+#  "schema.polling.enable": false,
+
+query Get_Post {
+  # alias
+  post342: post(id: "342") {
+    # alais
+    postId: id
+    id
+    title
+  }
+
+  post860: post(id: "860") {
+    id
+    posttITTLE: title
+  }
+}

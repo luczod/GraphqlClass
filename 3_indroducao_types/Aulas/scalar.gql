@@ -1,0 +1,30 @@
+import { ApolloServer, gql } from "apollo-server";
+# todos os tipos estão com letra maiuscula
+# ! required
+#  dentro e fora do array usa o !
+const server = new ApolloServer({
+  typeDefs: gql`
+    type Query {
+      id: ID!
+      name: String!
+      age: Int!
+      average: Float!
+      married: Boolean
+      arratString: [Int!]!
+    }
+  `,
+  resolvers: {
+    Query: {
+      id: () => "165165sdfs",
+      name: () => "lucas",
+      age: () => 24,
+      average: () => 50.5,
+      married: () => false,
+      arratString: () => [1, 4, 5],
+    },
+  },
+});
+
+server.listen(4004).then(({ url }) => {
+  console.log(`server run in ${url}`);
+});

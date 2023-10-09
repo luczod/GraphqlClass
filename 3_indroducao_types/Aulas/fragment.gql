@@ -1,0 +1,26 @@
+# como variaveis
+fragment post on Post {
+  id
+  title
+  # body
+  indexRef
+  createdAt
+  unixTimestamp
+}
+
+query Get_Post {
+  post1: post(id: "15") {
+    ...post
+  }
+  post2: post(id: "15") {
+    id
+    title
+  }
+  post3: post(id: "860") {
+    ...post
+  }
+  post4: post(id: "783") {
+    id
+    title
+  }
+}

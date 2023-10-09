@@ -1,0 +1,27 @@
+mutation CREATE_COMENT {
+  createComment(data: { postId: "645", comment: "comentario da pessoa 6" }) {
+    id
+    comment
+  }
+}
+
+mutation LOGINOUT {
+  logout(userName: "sultao")
+}
+
+mutation Login {
+  login(data: { userName: "sultao", password: "aB12387" }) {
+    userId
+    token
+  }
+}
+
+query GET_POSTS {
+  posts {
+    id
+    comments {
+      comment
+      id
+    }
+  }
+}

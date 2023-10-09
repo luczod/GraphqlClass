@@ -1,0 +1,26 @@
+query GetPosts {
+  posts(input: { _sort: "indexRef", _order: "asc", _start: 0, _limit: 3 }) {
+    id
+    createdAt
+    unixTimestamp
+    indexRef
+  }
+}
+
+query GetUsers($sort: String = "indexRef") {
+  users(input: { _sort: $sort, _order: "desc", _start: 0, _limit: 2 }) {
+    id
+    firstName
+    lastName
+    indexRef
+  }
+}
+
+query GetUsers($sort: String = "indexRef", $order: ApiFilterOrder = ASC) {
+  users(input: { _sort: $sort, _order: $order, _start: 0, _limit: 2 }) {
+    id
+    firstName
+    lastName
+    indexRef
+  }
+}

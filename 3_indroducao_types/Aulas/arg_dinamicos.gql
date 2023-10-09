@@ -1,0 +1,10 @@
+query GetUser($id: ID!, $teste: Boolean) {
+  user(id: $id, teste: $teste) {
+    id
+    userName
+    firstName
+    userName
+    indexRef
+    createdAt
+  }
+}

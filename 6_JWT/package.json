@@ -1,0 +1,33 @@
+{
+  "name": "curso_graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r dotenv/config -r sucrase/register src",
+    "server": "json-server --watch db.json -p 4005"
+  },
+  "keywords": [],
+  "author": "lucas",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.13.0",
+    "apollo-server": "2.23.0",
+    "bcrypt": "^5.1.0",
+    "dataloader": "^2.2.2",
+    "dotenv": "^16.0.3",
+    "dotnet": "^1.1.4",
+    "faker": "^6.6.6",
+    "fetch-node": "^0.0.1",
+    "graphql": "15.5.0",
+    "json-server": "^0.17.3",
+    "jsonwebtoken": "^9.0.0",
+    "node-fetch": "^2.6.11"
+  },
+  "devDependencies": {
+    "e": "^0.2.33",
+    "nodemon": "^2.0.22",
+    "sucrase": "^3.32.0"
+  }
+}

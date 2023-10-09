@@ -1,0 +1,44 @@
+mutation UPDATE_POST {
+  updatePost(
+    PostId: "6abpCpo"
+    data: { title: "O titulo", body: "o body", userId: "592" }
+  ) {
+    id
+    title
+    body
+    user {
+      firstName
+    }
+    indexRef
+    createdAt
+  }
+}
+
+mutation UPDATE_POST {
+  updatePost(
+    PostId: "6abpCpo"
+    data: { title: "update patch O titulo", userId: "" }
+  ) {
+    id
+    title
+    body
+    user {
+      firstName
+    }
+    indexRef
+    createdAt
+  }
+}
+
+query GetPosts {
+  posts(input: { _sort: "indexRef", _order: DESC, _start: 0, _limit: 10 }) {
+    id
+    title
+    indexRef
+    user {
+      id
+      firstName
+      lastName
+    }
+  }
+}

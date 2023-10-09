@@ -1,0 +1,23 @@
+mutation CREATE_USER {
+  createUser(
+    data: {
+      firstName: "Mustapha"
+      lastName: "Mond"
+      userName: "Administrador  Mundial"
+    }
+  ) {
+    id
+    firstName
+    lastName
+  }
+}
+mutation UPDATE_USER {
+  updateUser(userId: "sutmH13", data: { userName: "primeiro-ministro" }) {
+    id
+    firstName
+    lastName
+  }
+}
+mutation DELETE_User {
+  deleteUser(userId: "x_GQuH6")
+}

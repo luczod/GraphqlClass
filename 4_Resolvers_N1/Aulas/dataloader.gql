@@ -1,0 +1,34 @@
+query GetPosts {
+  posts(input: { _limit: 10 }) {
+    id
+    title
+    user {
+      id
+      firstName
+      lastName
+    }
+  }
+}
+query GetPosts {
+  posts {
+    id
+    title
+    user {
+      id
+      firstName
+      lastName
+    }
+  }
+}
+
+query Get_Post {
+  post(id: "940") {
+    id
+    title
+    user {
+      id
+      firstName
+      lastName
+    }
+  }
+}

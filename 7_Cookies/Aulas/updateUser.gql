@@ -1,0 +1,10 @@
+# {
+#   "authorization"
+# }
+mutation UPDATE_User {
+  updateUser(userId: "SdOMbjX", data: { firstName: "mmLenina" }) {
+    id
+    firstName
+    userName
+  }
+}

@@ -1,0 +1,13 @@
+query GetPosts {
+  posts {
+    id
+    title
+  }
+}
+
+query GetPost {
+  post {
+    id
+    title
+  }
+}

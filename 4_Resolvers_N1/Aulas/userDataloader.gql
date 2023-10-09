@@ -1,0 +1,32 @@
+query getuser {
+  user(id: "90") {
+    id
+    firstName
+    posts {
+      id
+    }
+  }
+}
+
+query GetUsers {
+  users {
+    id
+    firstName
+    posts {
+      id
+    }
+  }
+}
+
+query getuser {
+  user(id: "903") {
+    id
+    firstName
+    posts {
+      id
+      user {
+        id
+      }
+    }
+  }
+}

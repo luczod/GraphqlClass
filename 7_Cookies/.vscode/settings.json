@@ -1,0 +1,9 @@
+{
+  "code-runner.executorMap": {
+    "javascript": "node -r dotenv/config -r sucrase/register"
+    // "python": "clear && venv/bin/python"
+  },
+  "files.associations": {
+    "*.gql": "graphql"
+  }
+}
